@@ -22,13 +22,13 @@ export function About() {
           <div className="aboutDescription">
             <h2>About me</h2>
             <p>
-              I'm a passionate front-end developer with expertise in designing
+              {`I'm a passionate front-end developer with expertise in designing
               and building high-quality web applications. My focus is on
               crafting intuitive user interfaces and seamless functionality
-              using modern frameworks like React.js and Next.js.
+              using modern frameworks like React.js and Next.js.`}
               <br />
-              Feel free to explore my portfolio to learn more about my skills,
-              experience, and latest projects.
+              {`Feel free to explore my portfolio to learn more about my skills,
+              experience, and latest projects.`}
             </p>
           </div>
 

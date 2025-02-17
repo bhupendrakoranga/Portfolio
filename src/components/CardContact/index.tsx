@@ -18,9 +18,9 @@ export function CardContact() {
         </div>
         <CardContactContent>
           <div className="description">
-            <h2>Let's talk!</h2>
+            <h2>{`Let's talk!`}</h2>
             <p>
-              I’m always open to new ideas, collaborations, or just a friendly chat. You can reach me on the following platforms, and don’t forget to check out my latest work on Instagram and GitHub. I will do my best to contact you!
+              {`I’m always open to new ideas, collaborations, or just a friendly chat. You can reach me on the following platforms, and don’t forget to check out my latest work on Instagram and GitHub. I will do my best to contact you!`}
             </p>
           </div>
 

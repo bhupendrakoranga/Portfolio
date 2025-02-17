@@ -85,7 +85,7 @@ export default function Experience() {
                     <div className="title-container">
                       <div className="title-content">
                         <div>
-                          <img src={experience.img} alt={experience.title} />
+                          <Image width={100} height={100} src={experience.img} alt={experience.title} />
                         </div>
                         <div className="title">
                           <h1>{experience.title}</h1>

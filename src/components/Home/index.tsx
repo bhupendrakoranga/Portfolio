@@ -27,7 +27,7 @@ export function HomeHero() {
             </span>
           </h1>
           <h2>
-            I'm a <Typewriter
+            {`I'm a`} <Typewriter
               options={{
                 strings: ['Front-End Developer.', 'Designer.', 'Freelancer.'],
                 autoStart: true,
@@ -49,7 +49,7 @@ export function HomeHero() {
           </div>
         </HomeText>
         <ImgHome>
-          <img className="home-img" src="/home.png" alt="Imagem da Home" />
+          <Image width={500} height={500} className="home-img" src="/home.png" alt="Imagem da Home" />
 
           <div className="code">
             <Image
