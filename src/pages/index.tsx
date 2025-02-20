@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Bhupendra koranga | Front-End Developer</title>
+        <title>Bhupendra Singh Koranga | Front-End Developer</title>
       </Head>
 
       <Header />

@@ -25,12 +25,9 @@ export function Educations() {
               return (
                 <S.List key={education.id}>
                   <S.ListImage>
-                    <img src={education.logo} alt={education.subTitle} />
+                    <img style={{ width: education?.id === 1 ? "60%" : "" }} src={education.logo} alt={education.subTitle} />
                     <p>
-                      Nível: <span>{education.level} </span>
-                    </p>
-                    <p>
-                      Status: <span>{education.status}</span>
+                      {education?.id === 1 ? "Year :" : "Status :"} <span>{education.status}</span>
                     </p>
                   </S.ListImage>
 

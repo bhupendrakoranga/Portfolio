@@ -1,34 +1,24 @@
 const certificates = [
   {
     id: 1,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/discover-conectar.png',
+    name: "certificate-javaScript",
+    image: "/education/certificate/JavaScript.png",
   },
   {
     id: 2,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/discover-fundamentar.png',
+    name: "certificate-ReactJS",
+    image: "/education/certificate/ReactJS.png",
   },
   {
     id: 3,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/discover-especializar.png',
+    name: "certificate-Front-end",
+    image: "/education/certificate/Front-End-Development.png",
   },
   {
     id: 4,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/bradesco.webp',
+    name: "certificate-C++",
+    image: "/education/certificate/C++ Course.png",
   },
-  {
-    id: 5,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/bradesco-2.webp',
-  },
-  {
-    id: 6,
-    name: 'certificado-discover-conectar',
-    image:'/education/certificate/bradesco-3.webp',
-  },
-]
+];
 
-export default certificates
+export default certificates;
