@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const heartBeat = keyframes`
   0% {
@@ -20,7 +20,7 @@ const heartBeat = keyframes`
 
 export const FooterContainer = styled.footer`
   margin-top: 5rem;
-  border-top: 1px solid ${props => props.theme.gray_easy};
+  border-top: 1px solid ${(props) => props.theme.gray_easy};
   padding: 1.4rem 0;
   display: flex;
   flex-direction: column;
@@ -34,13 +34,13 @@ export const FooterContainer = styled.footer`
   }
 
   h4 {
-    font-size: 1.1rem;
+    font-size: 13px;
     display: flex;
-    color: ${props => props.theme.gray};
+    color: ${(props) => props.theme.gray};
   }
 
   p {
-  color: ${props => props.theme.firstColor};
+    color: ${(props) => props.theme.firstColor};
     background: linear-gradient(90deg, #9442fe, #3378ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -52,8 +52,8 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     padding: 0 5px;
-    color: ${props => props.theme.red};
-   
+    color: ${(props) => props.theme.red};
+
     svg {
       animation: ${heartBeat} 1.5s infinite;
     }
@@ -64,11 +64,11 @@ export const FooterContainer = styled.footer`
     display: flex;
     gap: 9px;
     font-size: 1.4rem;
-    color: ${props => props.theme.gray};
+    color: ${(props) => props.theme.gray};
 
     a {
       &:hover {
-        color: ${props => props.theme.firstColor};
+        color: ${(props) => props.theme.firstColor};
       }
     }
   }

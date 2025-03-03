@@ -9,7 +9,7 @@ export function Work() {
   return (
     <Container id="work">
       <Title>
-        Trabalho
+        Work
         <span>
           <BiBarChartSquare /> Work
         </span>
@@ -29,7 +29,8 @@ export function Work() {
               <button type="button">
                 <Link href={`/work/${work.url}`}>
                   <a>
-                    Ver mais <AiOutlineRightCircle />
+                    See more
+                    <AiOutlineRightCircle />
                   </a>
                 </Link>
               </button>
