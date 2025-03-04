@@ -60,7 +60,7 @@ export default function Projeto({ work }: WorkProps) {
                   weight="bold"
                   size={16}
                 />
-                Voltar
+                Back
               </ButtonAlternatives>
             </a>
           </Link>
@@ -97,7 +97,7 @@ export default function Projeto({ work }: WorkProps) {
                 weight="bold"
                 size={18}
               />{' '}
-              Voltar
+              Back
             </a>
           </ButtonSecondary>
         </Link>

@@ -9,12 +9,8 @@ import { PageSection } from '../styles/resume'
 import { BsFileText } from 'react-icons/bs'
 
 export default function Resume() {
-  const resumeData = 'https://www.canva.com/design/DAGfQjny0WE/ltr7cJzdhrtGHRGDrwr7vg/edit?utm_content=DAGfQjny0WE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
-  const previewData = `${resumeData.substr(
-    0,
-    resumeData.lastIndexOf('/') + 1
-  )}view?embed`
-
+  const resumeData = 'https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing'
+  const previewData = `https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/preview`
   return (
     <>
       <Head>
@@ -53,7 +49,6 @@ export default function Resume() {
             height="780"
             title="Bhupendra Singh Koranga Resume"
           />
-
           <CV />
         </PageSection>
       </Section>

@@ -2,7 +2,7 @@ const works = [
   {
     id: 1,
     url: "spedisco",
-    img: "/work/spedisco/dashboard.png",
+    img: "/work/wcag/dashboard.png",
     logo: "/work/wcag/wcag-logo.png",
     title: "ADA Legal Team",
     subTitle: "",

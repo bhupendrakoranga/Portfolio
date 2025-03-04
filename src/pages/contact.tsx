@@ -14,13 +14,12 @@ export default function Contacts() {
           name="description"
           content="Feel free to get in touch and let's talk about how we can work together."
         />
-        <meta property="og:title" content="Contact | Evander Inácio" />
+        <meta property="og:title" content="Contact | Bhuoendra Singh Koranga" />
         <meta
           property="og:description"
           content="Feel free to get in touch and let's talk about how we can work together."
         />
       </Head>
-
       <Header />
       <Links />
       <ScrollTop />
