@@ -1,4 +1,3 @@
-import { FormEvent, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { sendContactMail } from '../../services/sendMail'
 import { z } from 'zod'
@@ -17,23 +16,20 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>
 
 export function Form() {
-  const { register, reset } = useForm<ContactFormData>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors }
+  } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema)
   })
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-
-  const onSubmits = async (event: FormEvent) => {
-    event.preventDefault()
-
+  const onSubmit = async (data: ContactFormData) => {
+    debugger
     try {
-      await sendContactMail(name, email, message)
+      await sendContactMail(data.name, data.email, data.message)
       toast.success('Message sent successfully.')
-      setName('')
-      setEmail('')
-      setMessage('')
       reset()
     } catch (error) {
       toast.error('An error occurred while sending the message. Please try again!')
@@ -41,68 +37,33 @@ export function Form() {
   }
 
   return (
-    <FormContent onSubmit={onSubmits}>
+    <FormContent onSubmit={handleSubmit(onSubmit)}>
       <div className="input-group">
-        <input
-          type="text"
-          {...register('name')}
-          onChange={({ target }) => setName(target.value)}
-          name="name"
-          id="name"
-          autoComplete="name"
-          placeholder=" "
-          required
-          className="input"
-        />
-        <label htmlFor="name" className="user-label">
-          Name{' '}
-          <span>
-            <User size={15} weight="bold" />
-          </span>
+        <input {...register('name')} placeholder=" " className="input" required />
+        <label className="user-label">
+          Name <span><User size={15} weight="bold" /></span>
         </label>
+        {errors.name && <p className="error">Name is required (min 3 characters)</p>}
       </div>
 
       <div className="input-group">
-        <input
-          type="email"
-          {...register('email')}
-          onChange={({ target }) => setEmail(target.value)}
-          required
-          name="email"
-          autoComplete="email"
-          id="email"
-          placeholder=" "
-          className="input"
-        />
-        <label htmlFor="email" className="user-label">
-          Email{' '}
-          <span>
-            <At size={15} weight="bold" />
-          </span>
+        <input {...register('email')} type="email" placeholder=" " className="input" required />
+        <label className="user-label">
+          Email <span><At size={15} weight="bold" /></span>
         </label>
+        {errors.email && <p className="error">Invalid email address</p>}
       </div>
 
       <div className="input-group">
-        <textarea
-          {...register('message')}
-          onChange={({ target }) => setMessage(target.value)}
-          name="description"
-          id="description"
-          autoComplete="description"
-          placeholder=" "
-          required
-          className="input"
-        ></textarea>
-        <label htmlFor="description" className="user-label">
-          Message{' '}
-          <span>
-            <ChatText size={15} weight="bold" />
-          </span>
+        <textarea {...register('message')} placeholder=" " className="input" required />
+        <label className="user-label">
+          Message <span><ChatText size={15} weight="bold" /></span>
         </label>
+        {errors.message && <p className="error">Message is required (min 2 characters)</p>}
       </div>
 
       <ButtonSecondary type="submit">
-        Submit <TelegramLogo size={15} weight="bold" />{' '}
+        Submit <TelegramLogo size={15} weight="bold" />
       </ButtonSecondary>
     </FormContent>
   )
