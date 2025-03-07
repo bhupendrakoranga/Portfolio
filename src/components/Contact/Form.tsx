@@ -5,11 +5,15 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import toast from 'react-hot-toast'
 import { ButtonSecondary } from '../../styles/styles'
 import { FormContent } from './styles'
-import { At, ChatText, TelegramLogo, User } from 'phosphor-react'
+import { At, ChatText, TelegramLogo, User, Phone } from 'phosphor-react'
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
   email: z.string().email(),
+  phone: z
+    .string()
+    .length(10)
+    .regex(/^\d{10}$/),
   message: z.string().min(2).max(1000)
 })
 
@@ -26,9 +30,8 @@ export function Form() {
   })
 
   const onSubmit = async (data: ContactFormData) => {
-    debugger
     try {
-      await sendContactMail(data.name, data.email, data.message)
+      await sendContactMail(data.name, data.email, data.phone, data.message)
       toast.success('Message sent successfully.')
       reset()
     } catch (error) {
@@ -52,6 +55,14 @@ export function Form() {
           Email <span><At size={15} weight="bold" /></span>
         </label>
         {errors.email && <p className="error">Invalid email address</p>}
+      </div>
+
+      <div className="input-group">
+        <input {...register('phone')} type="phone" placeholder=" " className="input" required />
+        <label className="user-label">
+          Phone <span><Phone size={15} weight="bold" /></span>
+        </label>
+        {errors.phone && <p className="error">Invalid phone number</p>}
       </div>
 
       <div className="input-group">

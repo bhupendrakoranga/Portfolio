@@ -8,11 +8,17 @@ const user_id = "HgzcRqeDkgGrw6MW7" as string;
 export const sendContactMail = async (
   name: string,
   email: string,
+  phone: string,
   message: string
 ) => {
   const data = { name, email, message };
   try {
-    const templateParams = { from_name: name, email: email, message: message };
+    const templateParams = {
+      from_name: name,
+      email: email,
+      phone: phone,
+      message: message,
+    };
     await emailjs.send(service_id, template_id, templateParams, user_id);
 
     return await axios.post("/api/contact", data);
