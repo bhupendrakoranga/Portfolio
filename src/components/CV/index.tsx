@@ -4,6 +4,7 @@ import { CVContainer, CVContent, CVDescription, Curriculum } from "./styles"
 import { FiDownload } from 'react-icons/fi'
 import Avatar from '../../../public/avatar.jpg';
 import Image from "next/image";
+import Link from 'next/link'
 
 export function CV() {
   return (
@@ -37,11 +38,11 @@ export function CV() {
 
           <Curriculum>
             <img src="/cv.png" alt="Man showing a resume download button" />
-            <a target="_blank" href="https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing" download>
+            <Link target="_blank" href="https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing" download>
               <ButtonSecondAlt>
                 <b>Download CV</b> <FiDownload size={20} />
               </ButtonSecondAlt>
-            </a>
+            </Link>
           </Curriculum>
         </CVContent>
       </CVContainer>
