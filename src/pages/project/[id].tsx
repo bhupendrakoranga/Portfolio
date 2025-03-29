@@ -6,16 +6,15 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Project } from '../../types/Project'
 import projects from '../../data/projects'
-
 import ReactPlayer from 'react-player'
 import { Footer } from '../../components/Footer'
 import { AllProjects } from '../../components/Projects/Github'
-
 import * as S from '../../styles/project'
 import { ButtonAlt, ButtonSecondary, Title, Description } from '../../styles/styles'
-import { ArrowLeft, ChatCenteredText, Image as IconImage,
-YoutubeLogo, Hash } from 'phosphor-react'
-import { FaGithub } from 'react-icons/fa'
+import {
+  ArrowLeft, ChatCenteredText, Image as IconImage,
+  YoutubeLogo, Hash
+} from 'phosphor-react'
 import { BsGlobe } from 'react-icons/bs'
 
 interface ProjectProps {
@@ -26,7 +25,7 @@ export default function Projeto({ project }: ProjectProps) {
   return (
     <>
       <Head>
-        <title>{project.title} | Evander Inácio </title>
+        <title>{project.title} | Bhupendra Singh Koranga </title>
         <meta name="description" content={project.description} />
         <meta property="og:title" content={project.title} />
         <meta property="og:description" content={project.description} />
@@ -52,14 +51,7 @@ export default function Projeto({ project }: ProjectProps) {
               <Link href={project.web}>
                 <a target="_blank">
                   <ButtonAlt>
-                    Projeto online <BsGlobe size={15} />
-                  </ButtonAlt>
-                </a>
-              </Link>
-              <Link href={project.github}>
-                <a target="_blank">
-                  <ButtonAlt>
-                    Repositório <FaGithub size={17} />
+                    Online project <BsGlobe size={15} />
                   </ButtonAlt>
                 </a>
               </Link>
@@ -70,7 +62,7 @@ export default function Projeto({ project }: ProjectProps) {
         <S.DescriptionProject>
           <div className="description">
             <Title>
-              Descrição
+              Description
               <span>
                 <ChatCenteredText /> Description
               </span>
@@ -88,7 +80,7 @@ export default function Projeto({ project }: ProjectProps) {
           </Title>
 
           <Description style={{ textAlign: 'center' }}>
-            Tecnologias usadas no desenvolvimento do projeto.
+            Technologies used in the development of the project.
           </Description>
 
           <S.TagsContainer>
@@ -127,15 +119,12 @@ export default function Projeto({ project }: ProjectProps) {
 
           <S.PrintContent>
             <S.Gif>
-              <h2>Detalhes</h2>
+              <h2>Details</h2>
               <p>
-                Nome: <span>{project.title}</span>
+                Name: <span>{project.title}</span>
               </p>
               <p>
                 Status: <span>{project.status}</span>
-              </p>
-              <p>
-                Ano: <span>{project.year}</span>
               </p>
               <h5>Preview</h5>
               <video className="preview" loop autoPlay muted playsInline>
@@ -191,7 +180,7 @@ export default function Projeto({ project }: ProjectProps) {
         </S.ContainerVideo>
 
         <div className="allProjects">
-          <AllProjects title={'Veja outros projetos'} />
+          <AllProjects title={'See other projects'} />
         </div>
         <Link href={'/#projects'}>
           <ButtonSecondary>
@@ -201,7 +190,7 @@ export default function Projeto({ project }: ProjectProps) {
                 weight="bold"
                 size={18}
               />{' '}
-              Voltar
+              Back
             </a>
           </ButtonSecondary>
         </Link>

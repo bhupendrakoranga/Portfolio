@@ -1,16 +1,16 @@
 const projects = [
   {
     id: 1,
-    url: "e-shop",
-    banner: "/projects/e-shop/banner.png",
+    url: "adda-legal-team",
+    banner: "/projects/adda-legal-portal/banner.png",
     img: "/projects/e-shop/banner.png",
     title: "Ada Legal Team",
     type: "Website",
-    icon: "/projects/e-shop/logo.svg",
-    github: "https://github.com/EvanderInacio/E-Shop",
-    web: "https://ecommerce-e-shop.vercel.app/",
+    icon: "/projects/adda-legal-portal/logo.png",
+    github: "",
+    web: "https://wcag-ui.devtrust.biz/login",
     description:
-      "Este projeto é uma implementação de um site de e-commerce completo, construído com as tecnologias Next.js, Tailwind CSS e integração de pagamentos utilizando Stripe. O objetivo é criar uma plataforma de compras online moderna, responsiva e de fácil utilização.",
+      "I developed a role-based document management system in Next.js, enhancing the user experience for over 500 users across roles such as Admins, Managers, Freelancers, and Attorneys. By integrating Google Drive and third-party APIs, I streamlined file management processes, reducing file handling time by 30% and enabling real-time updates for improved collaboration. Additionally, I managed version control and automated deployments using Git and CI/CD pipelines, which reduced deployment errors by 20% and ensured a reliable and efficient release process. This project significantly improved operational efficiency and user satisfaction by delivering a tailored, scalable, and secure solution for document management.",
     tags: [
       {
         name: "Next JS",
@@ -48,37 +48,43 @@ const projects = [
         name: "Home",
         description:
           "Homepage do site com um banner em forma de sliders que mostra os destaques de produtos existentes na loja. Cada slide destaca as características distintas de cada produto.",
-        img: "/projects/e-shop/home.png",
+        img: "/projects/adda-legal-portal/home.png",
       },
       {
         name: "Lista de Produtos",
         description:
           "Homepage do site, onde são exibidos todos os produtos da loja. Explorando uma ampla gama de produtos que atendem a diversos gostos e necessidades.",
-        img: "/projects/e-shop/home-products.png",
+        img: "/projects/adda-legal-portal/features.png",
       },
       {
         name: "Produto Detalhes",
         description:
           "Página de detalhes de um produto, contendo uma descrição do produto, assim como o seu preço e um imagem ilustrativa. Botão de adicionar aos favoritos ou ao carrinho.",
-        img: "/projects/e-shop/details.png",
+        img: "/projects/adda-legal-portal/features-two.png",
       },
       {
-        name: "Favoritos",
+        name: "Litigation",
         description:
           "Página de Favoritos, o seu próprio santuário de desejos! Aqui, você tem a oportunidade de manter um registro dos produtos que capturaram o seu coração.",
-        img: "/projects/e-shop/favorite.png",
+        img: "/projects/adda-legal-portal/features-three.png",
       },
       {
-        name: "Carrinho",
+        name: "Scans & Audits",
         description:
           "Página do carrinho. Aqui você tem a opção de adicionar a quantidade específica de produtos que deseja, assim como visualizar todos os produtos adicionados ao carrinho e a soma dos valores de todos os produtos.",
-        img: "/projects/e-shop/cart.png",
+        img: "/projects/adda-legal-portal/features-four.png",
       },
       {
-        name: "Checkout",
+        name: "Settlement",
         description:
-          "Página com o formulário de pagamentos da plataforma stripe.",
-        img: "/projects/e-shop/stripe.png",
+          "Página do carrinho. Aqui você tem a opção de adicionar a quantidade específica de produtos que deseja, assim como visualizar todos os produtos adicionados ao carrinho e a soma dos valores de todos os produtos.",
+        img: "/projects/adda-legal-portal/features-five.png",
+      },
+      {
+        name: "Users",
+        description:
+          "This is the user section in the admin role, where the admin add a specific user, defines their roles, and selects a color to identify the attorney user.",
+        img: "/projects/adda-legal-portal/user.png",
       },
       {
         name: "Sucesso",

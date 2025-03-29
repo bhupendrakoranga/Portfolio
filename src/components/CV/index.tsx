@@ -37,7 +37,7 @@ export function CV() {
 
           <Curriculum>
             <img src="/cv.png" alt="Man showing a resume download button" />
-            <a href="https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing" download>
+            <a target="_blank" href="https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing" download>
               <ButtonSecondAlt>
                 <b>Download CV</b> <FiDownload size={20} />
               </ButtonSecondAlt>

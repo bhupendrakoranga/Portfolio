@@ -14,7 +14,7 @@ export default function Contacts() {
           name="description"
           content="Feel free to get in touch and let's talk about how we can work together."
         />
-        <meta property="og:title" content="Contact | Bhuoendra Singh Koranga" />
+        <meta property="og:title" content="Contact | Bhupendra Singh Koranga" />
         <meta
           property="og:description"
           content="Feel free to get in touch and let's talk about how we can work together."

@@ -95,15 +95,15 @@ export function Header() {
               <FiGithub />
             </a>
           </Link>
-          <Link href={'https://www.linkedin.com/in/evander-inacio/'}>
+          <Link href={'www.linkedin.com/in/bhupendrakoranga-sde'}>
             <a target="_blank" aria-label="Link to Linkedin">
               <FiLinkedin />
             </a>
           </Link>
-          <Link href={'https://api.whatsapp.com/send?phone=5511995085916'}>
+          <Link href={'https://api.whatsapp.com/send?phone=7505331236'}>
             <a
               target="_blank"
-              aria-label="Link para entrar em contato via whatsapp"
+              aria-label="Link to contact via whatsapp"
             >
               <FaWhatsapp />
             </a>
