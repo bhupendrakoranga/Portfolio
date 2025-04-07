@@ -29,30 +29,41 @@ export function Projects() {
             <Link href={`/project/${project.url}`} key={project.id}>
               <a>
                 <ProjectsContent>
-                  <Image width={400} height={210} src={project.img} alt={project.title} />
+                  {project.banner && project.banner.endsWith(".mp4") ? (
+                    <video
+                      width={400}
+                      height={210}
+                      src={project.banner}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  ) : (
+                    <Image width={400} height={210} src={project.img} alt={project.title} />
+                  )}
                   <div className="title">
                     <h2>{project.title}</h2>
                     <span>{project.type}</span>
                     <div className="tags">
-                      {project.tags.map(tag => {
-                        return (
-                          <Image
-                            width={32}
-                            height={32}
-                            key={tag.name}
-                            src={tag.icon}
-                            alt={tag.name}
-                          />
-                        )
-                      })}
+                      {project.tags.map(tag => (
+                        <Image
+                          width={32}
+                          height={32}
+                          key={tag.name}
+                          src={tag.icon}
+                          alt={tag.name}
+                        />
+                      ))}
                     </div>
                   </div>
                 </ProjectsContent>
               </a>
             </Link>
-          )
+          );
         })}
       </ProjectsContainer>
+
     </Container>
   )
 }

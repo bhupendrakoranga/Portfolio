@@ -9,7 +9,7 @@ import { PageSection } from '../styles/resume'
 import { BsFileText } from 'react-icons/bs'
 
 export default function Resume() {
-  const resumeData = 'https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/view?usp=sharing'
+  const resumeData = 'https://drive.google.com/file/d/1FP9feyaJy-elplPnyFcIldDWmDe_Glgi/view?usp=sharing'
   const previewData = `https://drive.google.com/file/d/1j2rd5WwYUeFn5Jww3rcPFY8qeaHcHrnt/preview`
   return (
     <>
