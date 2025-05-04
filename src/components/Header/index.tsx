@@ -95,7 +95,7 @@ export function Header() {
               <FiGithub />
             </a>
           </Link>
-          <Link href={'www.linkedin.com/in/bhupendrakoranga-sde'}>
+          <Link href={'https://www.linkedin.com/in/bhupendrakoranga-sde'}>
             <a target="_blank" aria-label="Link to Linkedin">
               <FiLinkedin />
             </a>
